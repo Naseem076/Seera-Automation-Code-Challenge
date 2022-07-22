@@ -1,0 +1,192 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>5/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Jul 22 14:56:13 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>180 seconds (180506 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testRunners.TestRunnerSF.runScenario()'><b>runScenario</b><br>Test class: testRunners.TestRunnerSF<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To create new Case using the same above newly created Account and Contact", "Optional[FIRST SCENARIO - To create Accounts Contacts and Cases on Service App in Salesforce Application]"</td>
+<td><div><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=103.0.5060.134)
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;LAPTOP-N0L4SEKE&apos;, ip: &apos;192.168.17.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [88e2c237adc004a5fb83e17b38429c09, findElement {using=xpath, value=//span[@title=&apos;Cases&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: C:\Users\nasee\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53612}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53612/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 88e2c237adc004a5fb83e17b38429c09
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy32.toString(Unknown Source)
+	at java.lang.String.valueOf(Unknown Source)
+	at java.lang.StringBuilder.append(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.toString(ExpectedConditions.java:298)
+	at java.lang.String.valueOf(Unknown Source)
+	at java.lang.StringBuilder.append(Unknown Source)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at utilities.Utitilities.waitForElementVisbility(Utitilities.java:107)
+	at pageObjects.SfPgObj.sFCaseCreatedValidation(SfPgObj.java:375)
+	at stepDefinations.SFServiceAppsFirstScenarioSD.validate_new_cases_has_been_created_successfully_and_shown_in_cases_section_of_related_list_tab_of_account_something(SFServiceAppsFirstScenarioSD.java:105)
+	at ?.validate new Cases has been created successfully and shown in Cases section of related list tab of Account &quot;CaseNumber&quot;(file:///D:/SeeraAutomation/SeeraSFAutomation/SeeraSFAutomation/src/main/resources/testDataFeature/SFServiceAppsFirstScenario.feature:33)
+</pre></div><a href='#' onClick='toggleBox("stack-trace154468798", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace154468798'><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=103.0.5060.134)
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;LAPTOP-N0L4SEKE&apos;, ip: &apos;192.168.17.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [88e2c237adc004a5fb83e17b38429c09, findElement {using=xpath, value=//span[@title=&apos;Cases&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: C:\Users\nasee\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53612}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53612/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 88e2c237adc004a5fb83e17b38429c09
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy32.toString(Unknown Source)
+	at java.lang.String.valueOf(Unknown Source)
+	at java.lang.StringBuilder.append(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.toString(ExpectedConditions.java:298)
+	at java.lang.String.valueOf(Unknown Source)
+	at java.lang.StringBuilder.append(Unknown Source)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at utilities.Utitilities.waitForElementVisbility(Utitilities.java:107)
+	at pageObjects.SfPgObj.sFCaseCreatedValidation(SfPgObj.java:375)
+	at stepDefinations.SFServiceAppsFirstScenarioSD.validate_new_cases_has_been_created_successfully_and_shown_in_cases_section_of_related_list_tab_of_account_something(SFServiceAppsFirstScenarioSD.java:105)
+	at ?.validate new Cases has been created successfully and shown in Cases section of related list tab of Account &quot;CaseNumber&quot;(file:///D:/SeeraAutomation/SeeraSFAutomation/SeeraSFAutomation/src/main/resources/testDataFeature/SFServiceAppsFirstScenario.feature:33)
+</pre></div></td>
+<td>113</td>
+<td>testRunners.TestRunnerSF@49070868</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testRunners.TestRunnerSF.runScenario()'><b>runScenario</b><br>Test class: testRunners.TestRunnerSF<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To login into Salesforce Application", "Optional[FIRST SCENARIO - To create Accounts Contacts and Cases on Service App in Salesforce Application]"</td>
+<td></td>
+<td>20</td>
+<td>testRunners.TestRunnerSF@49070868</td></tr>
+<tr>
+<td title='testRunners.TestRunnerSF.runScenario()'><b>runScenario</b><br>Test class: testRunners.TestRunnerSF<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To create new Account in Service App", "Optional[FIRST SCENARIO - To create Accounts Contacts and Cases on Service App in Salesforce Application]"</td>
+<td></td>
+<td>10</td>
+<td>testRunners.TestRunnerSF@49070868</td></tr>
+<tr>
+<td title='testRunners.TestRunnerSF.runScenario()'><b>runScenario</b><br>Test class: testRunners.TestRunnerSF<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To create new Contact using the same above newly created Account", "Optional[FIRST SCENARIO - To create Accounts Contacts and Cases on Service App in Salesforce Application]"</td>
+<td></td>
+<td>2</td>
+<td>testRunners.TestRunnerSF@49070868</td></tr>
+<tr>
+<td title='testRunners.TestRunnerSF.runScenario()'><b>runScenario</b><br>Test class: testRunners.TestRunnerSF<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To login into Salesforce Application", "Optional[SECOND SCENARIO - Open Cases to Change Case Owner field to Queue Name - Dummy Queue]"</td>
+<td></td>
+<td>17</td>
+<td>testRunners.TestRunnerSF@49070868</td></tr>
+<tr>
+<td title='testRunners.TestRunnerSF.runScenario()'><b>runScenario</b><br>Test class: testRunners.TestRunnerSF<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Open Cases to Change Case Owner field to Queue Name - Dummy Queue", "Optional[SECOND SCENARIO - Open Cases to Change Case Owner field to Queue Name - Dummy Queue]"</td>
+<td></td>
+<td>13</td>
+<td>testRunners.TestRunnerSF@49070868</td></tr>
+</table><p>
+</body>
+</html>

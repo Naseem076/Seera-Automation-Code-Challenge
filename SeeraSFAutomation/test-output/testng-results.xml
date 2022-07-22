@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="0" total="6" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="180506" started-at="2022-07-22T14:56:13 IST" finished-at="2022-07-22T14:59:13 IST">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.TestRunnerSF@49070868]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Default test" duration-ms="180506" started-at="2022-07-22T14:56:13 IST" finished-at="2022-07-22T14:59:13 IST">
+      <class name="testRunners.TestRunnerSF">
+        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunners.TestRunnerSF@49070868]" name="setUpClass" is-config="true" duration-ms="453" started-at="2022-07-22T14:56:13 IST" finished-at="2022-07-22T14:56:13 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@1fc3df43]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.TestRunnerSF@49070868]" name="runScenario" duration-ms="20093" started-at="2022-07-22T14:56:13 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-22T14:56:33 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["To login into Salesforce Application"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[FIRST SCENARIO - To create Accounts Contacts and Cases on Service App in Salesforce Application]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.TestRunnerSF@49070868]" name="runScenario" duration-ms="10600" started-at="2022-07-22T14:56:33 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-22T14:56:44 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["To create new Account in Service App"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[FIRST SCENARIO - To create Accounts Contacts and Cases on Service App in Salesforce Application]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.TestRunnerSF@49070868]" name="runScenario" duration-ms="2621" started-at="2022-07-22T14:56:44 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-22T14:56:47 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["To create new Contact using the same above newly created Account"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[FIRST SCENARIO - To create Accounts Contacts and Cases on Service App in Salesforce Application]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.TestRunnerSF@49070868]" name="runScenario" duration-ms="113808" started-at="2022-07-22T14:56:47 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-22T14:58:41 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["To create new Case using the same above newly created Account and Contact"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[FIRST SCENARIO - To create Accounts Contacts and Cases on Service App in Salesforce Application]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchWindowException">
+            <message>
+              <![CDATA[no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=103.0.5060.134)
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'LAPTOP-N0L4SEKE', ip: '192.168.17.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [88e2c237adc004a5fb83e17b38429c09, findElement {using=xpath, value=//span[@title='Cases']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: C:\Users\nasee\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53612}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53612/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 88e2c237adc004a5fb83e17b38429c09]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=103.0.5060.134)
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'LAPTOP-N0L4SEKE', ip: '192.168.17.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [88e2c237adc004a5fb83e17b38429c09, findElement {using=xpath, value=//span[@title='Cases']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: C:\Users\nasee\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53612}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53612/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 88e2c237adc004a5fb83e17b38429c09
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+at com.sun.proxy.$Proxy32.toString(Unknown Source)
+at java.lang.String.valueOf(Unknown Source)
+at java.lang.StringBuilder.append(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.toString(ExpectedConditions.java:298)
+at java.lang.String.valueOf(Unknown Source)
+at java.lang.StringBuilder.append(Unknown Source)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+at utilities.Utitilities.waitForElementVisbility(Utitilities.java:107)
+at pageObjects.SfPgObj.sFCaseCreatedValidation(SfPgObj.java:375)
+at stepDefinations.SFServiceAppsFirstScenarioSD.validate_new_cases_has_been_created_successfully_and_shown_in_cases_section_of_related_list_tab_of_account_something(SFServiceAppsFirstScenarioSD.java:105)
+at ✽.validate new Cases has been created successfully and shown in Cases section of related list tab of Account "CaseNumber"(file:///D:/SeeraAutomation/SeeraSFAutomation/SeeraSFAutomation/src/main/resources/testDataFeature/SFServiceAppsFirstScenario.feature:33)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.TestRunnerSF@49070868]" name="runScenario" duration-ms="17522" started-at="2022-07-22T14:58:41 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-22T14:58:58 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["To login into Salesforce Application"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[SECOND SCENARIO - Open Cases to Change Case Owner field to Queue Name - Dummy Queue]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunners.TestRunnerSF@49070868]" name="runScenario" duration-ms="13240" started-at="2022-07-22T14:58:58 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-22T14:59:11 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Open Cases to Change Case Owner field to Queue Name - Dummy Queue"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[SECOND SCENARIO - Open Cases to Change Case Owner field to Queue Name - Dummy Queue]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:testRunners.TestRunnerSF@49070868]" name="tearDownClass" is-config="true" duration-ms="2135" started-at="2022-07-22T14:59:11 IST" finished-at="2022-07-22T14:59:13 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- testRunners.TestRunnerSF -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

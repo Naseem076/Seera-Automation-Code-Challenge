@@ -1,0 +1,876 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>SalesforceSeriveApps</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report dark">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">SF Account Contact Case Creation</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Jul 22, 2022 02:56:13 PM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Jul 22, 2022 02:56:13 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Jul 22, 2022 02:59:11 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>1</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>1</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='50%'>
+<b>1</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='50%'><b>1</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='83%'><b>5</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='16%'><b>1</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='94%'><b>17</b> steps passed</small></div>
+<div>
+<small data-tooltip='5%'><b>1</b> steps failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"FIRST SCENARIO - To create Accounts Contacts and Cases on Service App in Salesforce Application":147.015,"SECOND SCENARIO - Open Cases to Change Case Owner field to Queue Name - Dummy Queue":30.753
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@SFCaseUpate</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@SFLoginPage</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@SFAccountCreation</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@SFContactCreation</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@SFCaseCreation</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>build</td>
+<td>1.1</td>
+</tr>
+<tr>
+<td>user</td>
+<td>Naseem</td>
+</tr>
+<tr>
+<td>AppName</td>
+<td>Create Accounts Contacts and Cases in SF Application</td>
+</tr>
+<tr>
+<td>os</td>
+<td>Mac</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 1,
+failParent: 1,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 5,
+failChild: 1,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 17,
+failGrandChild: 1,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script><div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@SFCaseUpate</a><a class="dropdown-item" href="#">@SFLoginPage</a><a class="dropdown-item" href="#">@SFAccountCreation</a><a class="dropdown-item" href="#">@SFContactCreation</a><a class="dropdown-item" href="#">@SFCaseCreation</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="fail" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">FIRST SCENARIO - To create Accounts Contacts and Cases on Service App in Salesforce Application</p>
+            <p class="text-sm">
+              <span>2:56:14 PM</span> / <span>00:02:27:015</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">FIRST SCENARIO - To create Accounts Contacts and Cases on Service App in Salesforce Application</h5>
+<span class='badge badge-success'>07.22.2022 2:56:14 PM</span>
+<span class='badge badge-danger'>07.22.2022 2:58:41 PM</span>
+<span class='badge badge-default'>00:02:27:015</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>To login into Salesforce Application</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinations.SFServiceAppsFirstScenarioSD.user_is_on_the_salesforce_application_login_page()">
+                <span>Given user is on the salesforce application login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinations.SFServiceAppsFirstScenarioSD.user_enters_sfusername_something_and_sfpassword_something_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>When user enters SFusername "harsh.chaturvedi@wise-raccoon-vgnfqt.com" and SFpassword "Seer@123" and clicks on Login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinations.SFServiceAppsFirstScenarioSD.validate_user_login_successfully_and_salesforce_home_page_is_displayed()">
+                <span>Then validate user login successfully and salesforce home page is displayed</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="6"><span class="badge log pass-bg mr-2">Pass</span>To create new Account in Service App</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinations.SFServiceAppsFirstScenarioSD.user_is_on_sf_home_page()">
+                <span>Given user is on SF Home Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinations.SFServiceAppsFirstScenarioSD.user_navigate_to_service_app_via_applaucher_then_create_new_account_and_enters_account_name_as_something_and_account_number_as_something_and_clicks_on_save_button(java.lang.String,java.lang.String)">
+                <span>When User navigate to Service App via AppLaucher then Create new Account and Enters Account Name as "AccountName1" and Account Number as "Account12345" and clicks on Save button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinations.SFServiceAppsFirstScenarioSD.validate_new_account_has_been_created_successfully_and_user_is_on_newly_created_account_something(java.lang.String)">
+                <span>Then validate new account has been created successfully and user is on newly created Account "AccountName"</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="10"><span class="badge log pass-bg mr-2">Pass</span>To create new Contact using the same above newly created Account</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="11"><span class="badge log pass-bg mr-2">Pass</span>To create new Contact using the same above newly created Account</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user is on Related List Tab of newly created Account Page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User navigate to Contact section then Create new Contact via New Button and Enters Contact ContactFN1  and Contact ContactLN1 and clicks on Save button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate new contact has been created successfully and shown in Contact section of related list tab of Account "ContactName"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="15"><span class="badge log fail-bg mr-2">Fail</span>To create new Case using the same above newly created Account and Contact</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="16"><span class="badge log fail-bg mr-2">Fail</span>To create new Case using the same above newly created Account and Contact</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given user is on Related List Tab of newly created Account Page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User navigate to Contact section then Create new Cases via New Button and Enters above Contact Name ContactFN1	ContactLN1 and Account Name Account Name2  and clicks on Save button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>Then validate new Cases has been created successfully and shown in Cases section of related list tab of Account "CaseNumber"</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=103.0.5060.134)
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'LAPTOP-N0L4SEKE', ip: '192.168.17.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [88e2c237adc004a5fb83e17b38429c09, findElement {using=xpath, value=//span[@title='Cases']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: C:\Users\nasee\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53612}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53612/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 88e2c237adc004a5fb83e17b38429c09
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy32.toString(Unknown Source)
+	at java.lang.String.valueOf(Unknown Source)
+	at java.lang.StringBuilder.append(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.toString(ExpectedConditions.java:298)
+	at java.lang.String.valueOf(Unknown Source)
+	at java.lang.StringBuilder.append(Unknown Source)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at utilities.Utitilities.waitForElementVisbility(Utitilities.java:107)
+	at pageObjects.SfPgObj.sFCaseCreatedValidation(SfPgObj.java:375)
+	at stepDefinations.SFServiceAppsFirstScenarioSD.validate_new_cases_has_been_created_successfully_and_shown_in_cases_section_of_related_list_tab_of_account_something(SFServiceAppsFirstScenarioSD.java:105)
+	at ?.validate new Cases has been created successfully and shown in Cases section of related list tab of Account "CaseNumber"(file:///D:/SeeraAutomation/SeeraSFAutomation/SeeraSFAutomation/src/main/resources/testDataFeature/SFServiceAppsFirstScenario.feature:33)
+</textarea>
+      
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="20"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">SECOND SCENARIO - Open Cases to Change Case Owner field to Queue Name - Dummy Queue</p>
+            <p class="text-sm">
+              <span>2:58:41 PM</span> / <span>00:00:30:753</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">SECOND SCENARIO - Open Cases to Change Case Owner field to Queue Name - Dummy Queue</h5>
+<span class='badge badge-success'>07.22.2022 2:58:41 PM</span>
+<span class='badge badge-danger'>07.22.2022 2:59:11 PM</span>
+<span class='badge badge-default'>00:00:30:753</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=20</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="21"><span class="badge log pass-bg mr-2">Pass</span>To login into Salesforce Application</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinations.SFServiceCaseUpdate.user_is_on_the_salesforce_application_login_page_for_Cases()">
+                <span>Given user is on the salesforce application login page for Cases</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinations.SFServiceCaseUpdate.user_enters_sfusername2_something_and_sfpassword2_something_and_clicks_on_login_button(java.lang.String,java.lang.String)">
+                <span>When user enters SFusername2 "harsh.chaturvedi@wise-raccoon-vgnfqt.com" and SFpassword2 "Seer@123" and clicks on Login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinations.SFServiceCaseUpdate.validate_user_login_successfully_and_salesforce_home_page_is_displayed_for_Cases()">
+                <span>Then validate user login successfully and salesforce home page is displayed for Cases</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="25"><span class="badge log pass-bg mr-2">Pass</span>Open Cases to Change Case Owner field to Queue Name - Dummy Queue</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="26"><span class="badge log pass-bg mr-2">Pass</span>Open Cases to Change Case Owner field to Queue Name - Dummy Queue</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user is on Service Home page on login</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user navigate to Cases via AppLauncher and open newly created case from 1st scenario to change Case Owner to QueueName as Dummy Queue and clicks on Save button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate Case Owner field value is updated to Queue and case saved successfully "Case updated"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">5</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+</span>
+<p class="name">@SFCaseUpate</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@SFCaseUpate</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:58:58 PM</td>
+<td>
+<a href="#" class="linked" test-id='20' id='25'>Open Cases to Change Case Owner field to Queue Name - Dummy Queue</a>
+<div class="">
+<span class="badge badge-default">SECOND SCENARIO - Open Cases to Change Case Owner field to Queue Name - Dummy Queue.Open Cases to Change Case Owner field to Queue Name - Dummy Queue</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:58:58 PM</td>
+<td>
+<a href="#" class="linked" test-id='20' id='26'>Open Cases to Change Case Owner field to Queue Name - Dummy Queue</a>
+<div class="">
+<span class="badge badge-default">SECOND SCENARIO - Open Cases to Change Case Owner field to Queue Name - Dummy Queue.Open Cases to Change Case Owner field to Queue Name - Dummy Queue</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+</span>
+<p class="name">@SFLoginPage</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@SFLoginPage</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:56:14 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>To login into Salesforce Application</a>
+<div class="">
+<span class="badge badge-default">FIRST SCENARIO - To create Accounts Contacts and Cases on Service App in Salesforce Application.To login into Salesforce Application</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:58:41 PM</td>
+<td>
+<a href="#" class="linked" test-id='20' id='21'>To login into Salesforce Application</a>
+<div class="">
+<span class="badge badge-default">SECOND SCENARIO - Open Cases to Change Case Owner field to Queue Name - Dummy Queue.To login into Salesforce Application</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@SFAccountCreation</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@SFAccountCreation</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:56:33 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='6'>To create new Account in Service App</a>
+<div class="">
+<span class="badge badge-default">FIRST SCENARIO - To create Accounts Contacts and Cases on Service App in Salesforce Application.To create new Account in Service App</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+</span>
+<p class="name">@SFContactCreation</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@SFContactCreation</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:56:44 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='10'>To create new Contact using the same above newly created Account</a>
+<div class="">
+<span class="badge badge-default">FIRST SCENARIO - To create Accounts Contacts and Cases on Service App in Salesforce Application.To create new Contact using the same above newly created Account</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:56:44 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='11'>To create new Contact using the same above newly created Account</a>
+<div class="">
+<span class="badge badge-default">FIRST SCENARIO - To create Accounts Contacts and Cases on Service App in Salesforce Application.To create new Contact using the same above newly created Account</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">@SFCaseCreation</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@SFCaseCreation</h4>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:56:47 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='15'>To create new Case using the same above newly created Account and Contact</a>
+<div class="">
+<span class="badge badge-default">FIRST SCENARIO - To create Accounts Contacts and Cases on Service App in Salesforce Application.To create new Case using the same above newly created Account and Contact</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:56:47 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='16'>To create new Case using the same above newly created Account and Contact</a>
+<div class="">
+<span class="badge badge-default">FIRST SCENARIO - To create Accounts Contacts and Cases on Service App in Salesforce Application.To create new Case using the same above newly created Account and Contact</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.openqa.selenium.NoSuchWindowException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.NoSuchWindowException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:57:10 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='19'>Then validate new Cases has been created successfully and shown in Cases section of related list tab of Account "CaseNumber"</a>
+<div class="">
+<span class="badge badge-default">FIRST SCENARIO - To create Accounts Contacts and Cases on Service App in Salesforce Application.To create new Case using the same above newly created Account and Contact.Then validate new Cases has been created successfully and shown in Cases section of related list tab of Account "CaseNumber"</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
