@@ -31,6 +31,10 @@ Step16: Right click on Project  Select ‘Maven’ Select ‘Update Projec
  
 Step17: To run Test Execution through Test Runner Class 
 Go to:  src/test/java  Test RunnerSF class Run As
+
+Step18: Once test Execution is completed. (Refresh the  Project folder)
+Test Execution report is saved in Target folder
+
  
 
 
